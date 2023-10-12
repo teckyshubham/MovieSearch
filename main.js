@@ -13,7 +13,7 @@ function onClickIs() {
 document.getElementById('searchMovie').addEventListener('click',onClickIs);
 // dynamic dispaly of movie
 function getMovies(searchText) {
-    var temp='http://www.omdbapi.com/?i=tt3896198&apikey=f6318a9&s=';
+    var temp='https://www.omdbapi.com/?i=tt3896198&apikey=f6318a9&s=';
     // fetch the movie with reqiored
 
     fetch((temp+searchText)  || ( process.env.db_url1  + searchText)).then(function (response) {
