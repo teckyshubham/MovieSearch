@@ -5,6 +5,12 @@ $(document).ready(() => {
         e.preventDefault();
     });
 });
+function onClickIs() {
+    let searchText = $('#searchText').val();
+        getMovies(searchText);
+        e.preventDefault();
+}
+document.getElementById('searchMovie').addEventListener('click',onClickIs);
 // dynamic dispaly of movie
 function getMovies(searchText) {
     var temp='http://www.omdbapi.com/?i=tt3896198&apikey=f6318a9&s=';
@@ -140,7 +146,7 @@ function getMovie() {
                 ${movie.Plot}
                 <hr>
                 <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" class="btn btn-primary">View IMDB</a>
-                <a href="index.html" class="btn btn-default">Go Back To Search</a>
+                <a href="index.html" class="btn btn-primary">Go Back To Search</a>
                 <a onClick="favouriteMovie('${movie.Poster}','${movie.Title}')" class="btn btn-primary" href="index.html">ADD TO Favourite Movie</a>
             </div>
         </div>
